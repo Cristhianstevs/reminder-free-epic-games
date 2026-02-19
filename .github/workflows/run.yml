@@ -2,7 +2,7 @@ name: Run Epic Games Bot
 
 on:
   schedule:
-    - cron: '8 * * * *'   # roda a cada hora (minuto 5)
+    - cron: '* * * * *'   # roda a cada hora (minuto 5)
   workflow_dispatch:      # permite rodar manualmente
 
 jobs:
