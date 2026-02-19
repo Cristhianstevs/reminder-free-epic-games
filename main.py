@@ -5,10 +5,8 @@ from datetime import datetime, timezone
 # CONFIGURAÇÕES
 # ==============================
 
-TELEGRAM_TOKEN = "8254744921:AAHOf1iPVXBfZK2fz9rp4TbKJdq7Wcgsgw8"
-CHAT_ID = "-1003825008506"
-# url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/getUpdates"
-# print(requests.get(url).json())
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 
 EPIC_URL = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions"
 
