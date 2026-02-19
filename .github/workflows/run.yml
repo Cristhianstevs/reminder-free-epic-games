@@ -2,8 +2,8 @@ name: Run Epic Games Bot
 
 on:
   schedule:
-    - cron: '* * * * *'   # roda a cada hora (minuto 5)
-  workflow_dispatch:      # permite rodar manualmente
+    - cron: '0 20 * * 4'   # Quinta-feira às 17:00 (Brasil UTC-3)
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests deep-translator
 
       - name: Run script
         run: python main.py
