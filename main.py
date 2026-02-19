@@ -1,4 +1,5 @@
 import requests
+import os
 from datetime import datetime, timezone
 
 # ==============================
@@ -7,6 +8,9 @@ from datetime import datetime, timezone
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
+
+if not TELEGRAM_TOKEN or not CHAT_ID:
+    raise ValueError("Variáveis TELEGRAM_TOKEN ou CHAT_ID não definidas.")
 
 EPIC_URL = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions"
 
