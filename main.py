@@ -1,3 +1,5 @@
+# Comit para manter projeto funcionando - 1
+
 import requests
 import os
 from datetime import datetime, timezone
